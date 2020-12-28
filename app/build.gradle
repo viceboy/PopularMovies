@@ -9,11 +9,12 @@ android {
 
     defaultConfig {
         applicationId "com.viceboy.popularmovies"
-        minSdkVersion 21
+        minSdkVersion 16
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
 
+        multiDexEnabled true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         buildConfigField "String", "API_KEY", "\"69f8d44407d7b73a4103add4c76fccb6\""
     }
