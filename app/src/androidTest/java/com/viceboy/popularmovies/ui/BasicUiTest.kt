@@ -29,7 +29,7 @@ class BasicUiTest {
 
     @Test
     fun test1() {
-        SystemClock.sleep(15000)
+        SystemClock.sleep(25000)
         onView(
             withId(R.id.rvMovies)).
         check(itemViewMatches(0, R.id.tvTitle,
