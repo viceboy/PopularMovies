@@ -1,5 +1,5 @@
-gmsaas auth login sumit.jha@newglobe.education Sumit@123
-gmsaas config set android-sdk-path /home/mango/Android/Sdk
+gmsaas auth login #{Username} #{Password}
+gmsaas config set android-sdk-path #{ANDROID_HOME}
 deviceId=`gmsaas instances start e6a305b5-ca40-4587-9aa8-623eb535b2f2 test1`
 serialId=`gmsaas instances adbconnect "${deviceId}"`
 gmsaas instances list
