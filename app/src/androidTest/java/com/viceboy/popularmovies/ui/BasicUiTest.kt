@@ -33,7 +33,7 @@ class BasicUiTest {
         onView(
             withId(R.id.rvMovies)).
         check(itemViewMatches(0, R.id.tvTitle,
-            withEffectiveVisibility(Visibility.VISIBLE)))
+            withEffectiveVisibility(Visibility.GONE)))
     }
 }
 
