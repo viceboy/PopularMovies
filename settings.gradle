@@ -1,7 +1,11 @@
+plugins {
+    id "com.gradle.enterprise" version "3.4.1"
+}
 include ':app'
 rootProject.name = "PopularMovies"
 buildCache {
     local {
+        push = true
         enabled = true
         directory = new File(rootDir, 'build-cache')
         removeUnusedEntriesAfterDays = 30
