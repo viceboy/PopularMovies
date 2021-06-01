@@ -41,7 +41,6 @@ class MoviesAdapter : RecyclerView.Adapter<MoviesAdapter.MoviesViewHolder>() {
 
         fun bind(movie: Movie) {
             binding.movie = movie
-            binding.tvTitle.text = "TestY"
             binding.ivPoster.loadImage(MovieApiFactory.getPosterUrl(movie.poster_path))
         }
     }

@@ -19,7 +19,6 @@ class MoviesFragment : BaseFragment<FragmentMoviesBinding>() {
     override fun layoutRes(): Int = R.layout.fragment_movies
 
     override fun onCreate(binding: FragmentMoviesBinding) {
-        binding.tvError.text = "Testing Text"
         binding.rvMovies.adapter = moviesAdapter
         binding.rvMovies.addItemDecoration(DividerItemDecoration(requireContext(), VERTICAL))
     }
