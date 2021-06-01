@@ -5,7 +5,6 @@ buildCache {
         push = true
         enabled = true
         directory = new File(rootDir, 'build-cache')
-        removeUnusedEntriesAfterDays = 30
     }
     remote(HttpBuildCache) {
         enabled = false
