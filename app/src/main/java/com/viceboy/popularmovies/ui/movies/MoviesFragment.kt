@@ -26,7 +26,7 @@ class MoviesFragment : BaseFragment<FragmentMoviesBinding>() {
     override fun observeLiveData() {
         viewModel.moviesLiveData.observe(viewLifecycleOwner, Observer {
             when (it) {
-                is Resource.Loading -> Unit
+                is Resource.Loading -> showProgress()
                 is Resource.Success -> showData(it.data)
                 is Resource.Failure -> showError(it.exception)
             }
@@ -35,7 +35,7 @@ class MoviesFragment : BaseFragment<FragmentMoviesBinding>() {
 
     private fun showError(exception: Throwable) {
         binding?.loadState = LoadState.FAILURE
-        binding?.errorText = "Test message"
+        binding?.errorText = exception.message
     }
 
     private fun showData(data: List<Movie>) {
